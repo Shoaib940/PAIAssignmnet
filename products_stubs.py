@@ -18,4 +18,25 @@ class Product:
         
     except ValueError as e:
             print(f"Error")
-        
+        def get_price(self, quantity):
+      try:
+          if quantity <= 0:
+              raise ValueError("Quantity must be greater than 0.")
+          if 0 < quantity < 10:
+            return self.price * quantity
+          elif 10 <= quantity <= 99:
+            return ((self.price * quantity) - (0.1 * (self.price * quantity)))
+          elif quantity >= 100:
+            return ((self.price * quantity) - (0.2 * (self.price * quantity)))
+      except ValueError as e:
+          print(f"Error")
+          return None
+        # Create product object
+product = Product("Laptop", 150, 1000)
+
+# Test cases
+product.make_purchase(7)  
+product.make_purchase(1) 
+product.make_purchase(120) 
+product.make_purchase(-05) 
+product.make_purchase(3) 
