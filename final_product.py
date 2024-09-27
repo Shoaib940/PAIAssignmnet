@@ -18,7 +18,7 @@ class Product:
         
     except ValueError as e:
             print(f"Error")
-        def get_price(self, quantity):
+  def get_price(self, quantity):
       try:
           if quantity <= 0:
               raise ValueError("Quantity must be greater than 0.")
