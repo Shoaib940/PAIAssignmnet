@@ -3,7 +3,6 @@ class Product:
       self.name = name
       self.amount = amount
       self.price = price
-
   def get_price(self, quantity):
       return None
 
